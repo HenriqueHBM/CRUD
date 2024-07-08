@@ -1,5 +1,6 @@
 <?php
-include 'ClassConexao.php';
+//Puxa toda a rota vor var/etc...
+include "{$_SERVER['DOCUMENT_ROOT']}/CRUD/MYSQLI/Class/ClassConexao.php";
 class ClassCrud extends ClassConexao
 {
     //Atributos
@@ -33,8 +34,16 @@ class ClassCrud extends ClassConexao
     }
 
     //Insert into DB
-    public function insertDB($tabela , $condicao , $tipos , $parametros){
-        $this->preparedStatements("insert into {$tabela} values ({$condicao})" , $tipos , $parametros);
+    public function insertDB($tabela, $condicao, $tipos, $parametros)
+    {
+        $this->preparedStatements("insert into {$tabela} values ({$condicao})", $tipos, $parametros);
         return $this->crud;
+    }
+
+    //selacao BD, select bd
+    public function selectDB($campos, $tabela, $condicao,$tipos, $parametros)
+    {
+        $this->preparedStatements("select {$campos} from {$tabela} {$condicao}", $tipos, $parametros);
+        return  $this->resultado;
     }
 }

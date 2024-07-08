@@ -1,5 +1,6 @@
 <?php
-include 'ClassConexao.php';
+//Puxa toda a rota vor var/etc...
+include "{$_SERVER['DOCUMENT_ROOT']}/CRUD/PDO/Class/ClassConexao.php";
 class ClassCrud extends ClassConexao
 {
 
@@ -32,6 +33,13 @@ class ClassCrud extends ClassConexao
     // Insert into BD
     public function insertDB($tabela, $condicao, $parametros){
         $this->preparedStatements("insert into {$tabela} values ({$condicao})", $parametros);
+        return  $this->crud;
+    }
+
+
+    //selacao BD, select bd
+    public function selectDB($campos, $tabela, $condicao, $parametros){
+        $this->preparedStatements("select {$campos} from {$tabela} {$condicao}", $parametros);
         return  $this->crud;
     }
 }

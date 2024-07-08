@@ -99,3 +99,40 @@
 .flex{
     display: flex;
 }
+
+
+.tabela-crud{
+    width: 100%;
+    text-align: center;
+}
+.tabela-crud tr:nth-child(2n -1){
+    background-color: #ccc;
+}
+.tabela-crud tr:first-child{
+    background-color: #2b2a2a;
+    color: aliceblue;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+.tabela-crud td{
+    width: 25%;
+}
+
+.icons{
+    padding:7px; 
+    border-radius:10px;
+}
+
+.bg-info{
+    background-color: rgb(0, 119, 255) !important;
+}
+
+.bg-warning{
+    background-color: rgba(255, 240, 28, 0.832) !important;
+}
+
+.bg-danger{
+    background-color: rgba(240, 29, 29, 0.801) !important;
+}
