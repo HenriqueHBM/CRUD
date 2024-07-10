@@ -32,7 +32,7 @@ include 'Class/ClassCrud.php';
                 <td><?php echo $fetch['sexo'] ?></td>
                 <td><?php echo $fetch['cidade'] ?></td>
                 <td>
-                    <a href="visualizar.php">
+                    <a href=<?php echo "visualizar.php?id={$fetch['id']}"; ?>>
                         <img src="Images/lupa.png" class="icons bg-info" alt="Visualizar" width="20" height="20" >
                     </a>
                     <a href="editar.php">
