@@ -41,7 +41,7 @@ include 'Class/ClassCrud.php';
                     <a href="editar.php">
                         <img src="Images/pencil.png" class="icons bg-warning" alt="Editar" width="20" height="20" >
                     </a>
-                    <a href="deletar.php">
+                    <a class="deletar"  href="<?php echo "Controllers/deletarController.php?id={$fetch[0]}"; ?>">
                         <img src="Images/trash.png" class="icons bg-danger" alt="Deletar" width="20" height="20" >
                     </a>
                 </td>
@@ -49,5 +49,16 @@ include 'Class/ClassCrud.php';
         <?php } }?>
     </table>
 </div>
-
+<script>
+    $('.deletar').on('click', function(e){
+    e.preventDefault();
+    
+    var link = $(this).attr('href');
+    if(confirm('Deseja mesmo apagar esse dado?')){
+        window.location.href = link;
+    }else{
+        return false;
+    }
+});
+</script>
 <?php include 'Includes/Footer.php'  ?>

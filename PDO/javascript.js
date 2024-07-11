@@ -14,3 +14,12 @@ $('#formCadastro').on('submit', function(e){
     //     }
     // })
 });
+
+// confirmar antes de deletar
+$('.deletar').on('click', function(e){
+    e.preventDefault();
+    
+    var link = $(this).attr('href');
+    alert(link);
+    // if(confirm('Deseja mesmo apagar esse dado?')){}
+});

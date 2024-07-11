@@ -46,4 +46,9 @@ class ClassCrud extends ClassConexao
         $this->preparedStatements("select {$campos} from {$tabela} {$condicao}", $tipos, $parametros);
         return  $this->resultado;
     }
+// Deletar Dados BD
+    public function deleteDB($tabela, $condicao,$tipos, $parametros){
+        $this->preparedStatements("delete from {$tabela} where {$condicao}",$tipos,  $parametros);
+        return $this->crud;
+    }
 }
