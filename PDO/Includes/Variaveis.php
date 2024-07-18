@@ -1,5 +1,12 @@
 <?php
 
+if (isset($_POST['acao'])) {
+    $acao = filter_input(INPUT_POST, 'acao', FILTER_SANITIZE_SPECIAL_CHARS);
+} elseif (isset($_GET['acao'])) {
+    $acao = filter_input(INPUT_GET, 'acao', FILTER_SANITIZE_SPECIAL_CHARS);
+} else {
+    $acao = '';
+}
 
 if (isset($_POST['id'])) {
     $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_SPECIAL_CHARS);

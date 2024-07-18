@@ -48,5 +48,11 @@ class ClassCrud extends ClassConexao
         $this->preparedStatements("delete from {$tabela} where {$condicao}", $parametros);
         return $this->crud;
     }
+
+    // Editar dado
+    public function updateDB($tabela, $set, $condicao, $parametros){
+        $this->preparedStatements("update {$tabela} set {$set} where {$condicao}", $parametros);
+        return $this->crud;
+    }
 }
 

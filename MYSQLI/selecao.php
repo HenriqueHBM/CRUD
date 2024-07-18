@@ -38,7 +38,7 @@ include 'Class/ClassCrud.php';
                 <a href=<?php echo "visualizar.php?id={$fetch[0]}"; ?>>
                         <img src="Images/lupa.png" class="icons bg-info" alt="Visualizar" width="20" height="20" >
                     </a>
-                    <a href="editar.php">
+                    <a href="<?php echo "cadastro.php?id={$fetch[0]}"; ?>">
                         <img src="Images/pencil.png" class="icons bg-warning" alt="Editar" width="20" height="20" >
                     </a>
                     <a class="deletar"  href="<?php echo "Controllers/deletarController.php?id={$fetch[0]}"; ?>">
