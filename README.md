@@ -1,7 +1,7 @@
 Crud simples apenas para desenvolvimento e aprendizado.
 
-```
 Tabelas Usadas:
+```
   CREATE TABLE `cadastro` (
   `id` int NOT NULL AUTO_INCREMENT,
   `nome` varchar(255) NOT NULL,
@@ -9,6 +9,4 @@ Tabelas Usadas:
   `cidade` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`id`)
 );
-
-
 ```
